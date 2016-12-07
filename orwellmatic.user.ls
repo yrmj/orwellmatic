@@ -5,7 +5,7 @@
 // @description -irritation, +orwell
 // @version     0.1.0
 // @include     *theguardian.com/*
-// @resource    orwellImage https://raw.githubusercontent.com/yrmj/orwellmatic/master/George-Orwell.jpg
+// @resource    orwellImage https://raw.githubusercontent.com/yrmj/orwellmatic/master/george-orwell.jpg
 // @resource    orwellList https://raw.githubusercontent.com/yrmj/orwellmatic/master/orwellmatic-list.json
 // @resource    orwellStyles https://raw.githubusercontent.com/yrmj/orwellmatic/master/orwellmatic-styles.css
 // @grant       GM_getValue
