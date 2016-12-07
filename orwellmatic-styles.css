@@ -1,0 +1,43 @@
+div.orwellmatic {
+    position: fixed;
+    top: 0;
+    z-index: 500000000000;
+    width: 100%;
+    background-color: #4ed13a;
+    padding: 1em;
+    transition: width 0.5s;
+}
+
+div.orwellmatic.hidden {
+    width: 10%;
+}
+
+textarea.orwellmatic {
+    width: 75%;
+    height: 2em;
+    margin-left: 1em;
+    resize: none;
+    overflow: auto;
+    transition: opacity 0.4s, width 0.5s, height 0.5s;
+}
+
+.hidden textarea.orwellmatic {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    margin: 0px;
+}
+
+button.orwellmatic {
+    margin-left: 1em;
+}
+
+.hidden button.orwellmatic {
+    margin-left: 0;
+}
+
+img.orwellmatic {
+    max-width: 100%;
+    max-height: 100%;
+    float: right;
+}
