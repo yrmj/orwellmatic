@@ -4,8 +4,9 @@
 // @name        Orwellmatic
 // @namespace   yrmj
 // @description -irritation, +orwell
-// @version     0.1.0
+// @version     0.1.1
 // @include     *theguardian.com/*
+// @noframes
 // @resource    orwellImage https://raw.githubusercontent.com/yrmj/orwellmatic/master/george-orwell.jpg
 // @resource    orwellList https://raw.githubusercontent.com/yrmj/orwellmatic/master/orwellmatic-list.json
 // @resource    orwellStyles https://raw.githubusercontent.com/yrmj/orwellmatic/master/orwellmatic-styles.css
