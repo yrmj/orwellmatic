@@ -3,7 +3,8 @@ div.orwellmatic {
     top: 0;
     z-index: 500000000000;
     width: 100%;
-    background-color: #4ed13a;
+    height: 3em;
+    background-color: #a6fb99;
     padding: 1em;
     transition: width 0.5s;
 }
