@@ -3,7 +3,7 @@
 // @name        Orwellmatic
 // @namespace   yrmj
 // @description -irritation, +orwell
-// @version     0.1.1
+// @version     0.1.2
 // @include     *theguardian.com/*
 // @noframes
 // @resource    orwellImage https://raw.githubusercontent.com/yrmj/orwellmatic/master/george-orwell.jpg
@@ -14,6 +14,8 @@
 // @grant       GM_getResourceText
 // @grant       GM_getResourceURL
 // ==/UserScript==
+
+peace
 */
 
 orwell-list = GM_get-resource-text \orwellList |> JSON.parse
@@ -50,15 +52,15 @@ orwellise-document = !->
             if byline.inner-HTML.includes person then orwellise-element byline
 
 style-node = document.create-element \style
-style-node.type = 'text/css'
+style-node.type = \text/css
 style-node-text = GM_get-resource-text \orwellStyles |> document.create-text-node
 style-node.append-child style-node-text
-style-node.class-list.add 'orwellmatic'
+style-node.class-list.add \orwellmatic
 head = document.query-selector \head
 head.insert-before style-node, head.child-nodes[0]
 
 people = GM_get-value \people '' .split ', '
-banner = document.create-element 'div'
+banner = document.create-element \div
 banner.class-list.add \orwellmatic
 if GM_get-value \hidden false then banner.class-list.add \hidden
 banner.innerHTML = 'Orwellise: '
@@ -66,16 +68,16 @@ banner.innerHTML = 'Orwellise: '
 textbox = document.create-element 'textarea'
 textbox.class-list.add \orwellmatic
 textbox.value = people.join ', '
-textbox.add-event-listener "blur", !->
+textbox.add-event-listener \blur !->
     people := textbox.value.split ', '
     GM_set-value \people, textbox.value
     orwellise-document!
 
-hide = document.create-element 'button'
+hide = document.create-element \button
 switch-name = { 'Hide': 'Expand', 'Expand': 'Hide' }
 if GM_get-value \hidden false then hide.inner-HTML = 'Expand' else hide.inner-HTML = 'Hide'
 hide.class-list.add \orwellmatic
-hide.add-event-listener 'click', !->
+hide.add-event-listener \click !->
     if GM_get-value \hidden false
         banner.class-list.remove \hidden
         GM_set-value \hidden false
@@ -86,7 +88,7 @@ hide.add-event-listener 'click', !->
 
 banner.append-child textbox
 banner.append-child hide
-body = document.query-selector 'body'
+body = document.query-selector \body
 body.insert-before banner, body.child-nodes[0]
 
 orwellise-document!
