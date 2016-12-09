@@ -4,7 +4,7 @@
 // @name        Orwellmatic
 // @namespace   yrmj
 // @description -irritation, +orwell
-// @version     0.1.1
+// @version     0.1.2
 // @include     *theguardian.com/*
 // @noframes
 // @resource    orwellImage https://raw.githubusercontent.com/yrmj/orwellmatic/master/george-orwell.jpg
@@ -15,6 +15,8 @@
 // @grant       GM_getResourceText
 // @grant       GM_getResourceURL
 // ==/UserScript==
+
+peace
 */
 (function(){
   var orwellList, orwellImage, imageSwap, orwelliseElement, orwelliseDocument, styleNode, styleNodeText, head, people, banner, textbox, hide, switchName, body;
@@ -83,7 +85,7 @@
   textbox = document.createElement('textarea');
   textbox.classList.add('orwellmatic');
   textbox.value = people.join(', ');
-  textbox.addEventListener("blur", function(){
+  textbox.addEventListener('blur', function(){
     people = textbox.value.split(', ');
     GM_setValue('people', textbox.value);
     orwelliseDocument();
