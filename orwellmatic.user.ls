@@ -65,7 +65,7 @@ banner.class-list.add \orwellmatic
 if GM_get-value \hidden false then banner.class-list.add \hidden
 banner.innerHTML = 'Orwellise: '
 
-textbox = document.create-element 'textarea'
+textbox = document.create-element \textarea
 textbox.class-list.add \orwellmatic
 textbox.value = people.join ', '
 textbox.add-event-listener \blur !->
